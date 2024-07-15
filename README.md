@@ -30,3 +30,23 @@ SSAFY 부울경 3, 4반 알고리즘 스터디입니다. 자료구조와 알고�
 ---
 
 모두 힘내서 빠르면 요번 하반기 노려 봅시다 !!!!!!! 열심히 공부합시다! 🚀
+
+##  Contributors 
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/chaesc1"><img src="https://avatars.githubusercontent.com/u/101817171?v=4" width="100px;" alt=""/><br /><sub><b>채정훈</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/jhw296"><img src="https://avatars.githubusercontent.com/u/66813821?v=4" width="100px;" at=""/><br /><sub><b>조혜원</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/githeoheo"><img src="https://avatars.githubusercontent.com/u/50732828?v=4" width="100px;" at=""/><br /><sub><b>허준수</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/choijake"><img src="https://avatars.githubusercontent.com/u/50732828?v=4" width="100px;" at=""/><br /><sub><b>최재익</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/heon0945"><img src="https://avatars.githubusercontent.com/u/50732828?v=4" width="100px;" at=""/><br /><sub><b>한송헌</b></sub></a><br /></td>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+

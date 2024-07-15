@@ -32,7 +32,7 @@ SSAFY 부울경 3, 4반 알고리즘 스터디입니다. 자료구조와 알고�
 
 모두 힘내서 빠르면 요번 하반기 노려 봅시다 !!!!!!! 열심히 공부합시다! 🚀
 
-##  Contributors 
+##  코테벌레(진) 
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->

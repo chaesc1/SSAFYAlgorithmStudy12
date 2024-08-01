@@ -1,4 +1,4 @@
-package Day0729.algo;
+package Day0729.algo.Day0729;
 
 import java.io.*;
 import java.util.*;

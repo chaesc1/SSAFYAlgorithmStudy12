@@ -1,4 +1,4 @@
-package week3.DFS와BFS;
+package week3.BOJ.ABCDE.DFS와BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;

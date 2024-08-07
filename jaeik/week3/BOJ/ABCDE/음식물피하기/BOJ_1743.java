@@ -1,4 +1,4 @@
-package week3.음식물피하기;
+package week3.BOJ.ABCDE.음식물피하기;
 
 import java.io.BufferedReader;
 import java.io.IOException;

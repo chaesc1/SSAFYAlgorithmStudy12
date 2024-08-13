@@ -1,4 +1,4 @@
-package SWexpertAcademy.AType;
+package Day0814.SWEA보호필름;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -79,7 +79,6 @@ public class SWEA2112최적화시도 {
         }
     }
 
-    // 조건을 만족하는지 확인하는 함수
     // 조건을 만족하는지 확인하는 함수
     private static boolean isOk() {
         for (int i = 0; i < W; i++) {  // 열 단위로 체크

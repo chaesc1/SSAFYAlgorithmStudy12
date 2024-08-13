@@ -1,4 +1,4 @@
-package week3.ABCDE;
+package week3.BOJ.ABCDE;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package week3.봄버맨;
+package week3.BOJ.ABCDE.봄버맨;
 
 import java.io.BufferedReader;
 import java.io.IOException;

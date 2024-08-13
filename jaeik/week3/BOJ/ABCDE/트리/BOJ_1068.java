@@ -1,4 +1,4 @@
-package week3.트리;
+package week3.BOJ.ABCDE.트리;
 
 import java.io.BufferedReader;
 import java.io.IOException;

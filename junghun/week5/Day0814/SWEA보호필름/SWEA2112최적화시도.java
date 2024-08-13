@@ -1,11 +1,10 @@
+package SWexpertAcademy.AType;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-
-//두께 D, 가로크기 W인 보호 필름 단면의 정보와 합격기준 K
-public class SWEA2112 {
+public class SWEA2112최적화시도 {
     static int D, W, K;
     static int[][] map;
     static int result; // 최솟값
@@ -32,61 +31,60 @@ public class SWEA2112 {
                     map[i][j] = Integer.parseInt(st.nextToken());
                 }
             }
-            solve(0, 0);
+            // A 약품 처리하지 않아도 되는 경우를 먼저 체크
+            if (isOk()) {
+                result = 0;
+            } else {
+                solve(0, 0);
+            }
 
             sb.append("#").append(tc).append(" ").append(result).append("\n");
         }
         System.out.println(sb);
     }
 
-    // index 번째 행에 대한 조건 탐색을 한다
-    // A 약품 넣어보고, B 약품 넣어보고 둘다 해보고
-    // 원상복구 시킨다.
-    // cnt -> 약품 처리 횟수
+    // 재귀 탐색 함수
     private static void solve(int index, int cnt) {
-        if (isOk()) {
-            result = Math.min(cnt, result);
-            return;
-        }
-        if (cnt > result) {
-            return;
-        }
+        if (cnt >= result) return; // 이미 최솟값을 넘은 경우 가지치기
 
         if (index == D) {
+            if (isOk()) {
+                result = cnt;
+            }
             return;
         }
 
-        int[] col = new int[W];
+        // 현재 행 상태 저장
+        int[] original = map[index].clone();
 
-        for (int i = 0; i < W; i++) {
-            col[i] = map[index][i];
-        }
-
+        // 약품 처리 없이 다음 행으로
         solve(index + 1, cnt);
 
-        // A 로 교체해봐
-        for (int i = 0; i < W; i++) {
-            map[index][i] = 0;
-        }
+        // A 약품으로 교체한 경우
+        fillRow(index, 0);
         solve(index + 1, cnt + 1);
 
-        // B로 교체
-        for (int i = 0; i < W; i++) {
-            map[index][i] = 1;
-        }
+        // B 약품으로 교체한 경우
+        fillRow(index, 1);
         solve(index + 1, cnt + 1);
 
         // 원상복구
+        map[index] = original;
+    }
+
+    // 특정 행을 특정 값으로 채우는 함수
+    private static void fillRow(int index, int value) {
         for (int i = 0; i < W; i++) {
-            map[index][i] = col[i];
+            map[index][i] = value;
         }
     }
 
-    // 열을 체크해서 연속된 K 개가 있는지 체크
+    // 조건을 만족하는지 확인하는 함수
+    // 조건을 만족하는지 확인하는 함수
     private static boolean isOk() {
-        for (int i = 0; i < W; i++) {
-            int count = 1; // 시작 포함
-            boolean isValid = false;
+        for (int i = 0; i < W; i++) {  // 열 단위로 체크
+            int count = 1;  // 연속된 동일한 셀의 개수를 세기 위한 변수
+            boolean valid = false;
 
             for (int j = 1; j < D; j++) {
                 if (map[j][i] == map[j - 1][i]) {
@@ -95,17 +93,18 @@ public class SWEA2112 {
                     count = 1;
                 }
 
-                if (count == K) {
-                    isValid = true;
+                // 특정 열에서 K개의 연속된 셀이 있는지 확인
+                if (count >= K) {
+                    valid = true;
                     break;
                 }
             }
-            // 마지막까지 체크했는데 합격요건에 부합하지 않으면
-            if (!isValid) {
+
+            // 만약 K개의 연속된 셀이 없는 열이 하나라도 있으면, 조건 불충족
+            if (!valid) {
                 return false;
             }
         }
-
-        return true;
+        return true;  // 모든 열이 조건을 만족하면 true
     }
 }

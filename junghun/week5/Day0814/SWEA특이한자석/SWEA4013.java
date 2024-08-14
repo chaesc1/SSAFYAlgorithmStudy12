@@ -1,4 +1,4 @@
-package Day0814.algo;
+package Day0814.SWEA특이한자석;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -75,9 +75,9 @@ public class SWEA4013 {
             return;
         }
         // 닿아있는 톱니의 극성이 다르면 회전
-        if(gear[num].get(6) != gear[num-1].get(2)) {
-            turnInfo[num-1] = dir * -1; // 방향 반전
-            turnLeft(num-1, dir * -1, turnInfo);
+        if (gear[num].get(6) != gear[num - 1].get(2)) {
+            turnInfo[num - 1] = dir * -1; // 방향 반전
+            turnLeft(num - 1, dir * -1, turnInfo);
         }
     }
 
@@ -86,9 +86,9 @@ public class SWEA4013 {
             return;
         }
         // 닿아있는 톱니의 극성이 다르면 회전
-        if(gear[num].get(2) != gear[num+1].get(6)) {
-            turnInfo[num+1] = dir * -1; // 방향 반전
-            turnRight(num+1, dir * -1, turnInfo);
+        if (gear[num].get(2) != gear[num + 1].get(6)) {
+            turnInfo[num + 1] = dir * -1; // 방향 반전
+            turnRight(num + 1, dir * -1, turnInfo);
         }
     }
 }

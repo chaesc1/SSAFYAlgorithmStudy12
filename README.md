@@ -56,6 +56,7 @@
 - [프로그래머스 고득점 Kit](https://programmers.co.kr/learn/challenges?tab=algorithm_practice_kit)
 - [solved.ac Class 문제](https://solved.ac/class)
 - [SWEA / D2~D4](https://swexpertacademy.com/main/main.do)
+- [백준 문제 추리는 사이트](https://sup-algorithm.netlify.app/)
 
 ---
 빡센 것은 당연합니다. 머리부터 박읍시다!  

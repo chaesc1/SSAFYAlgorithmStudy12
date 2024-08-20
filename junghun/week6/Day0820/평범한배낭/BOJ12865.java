@@ -1,4 +1,4 @@
-package week6.평범한배낭;
+package week6.Day0820.평범한배낭;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

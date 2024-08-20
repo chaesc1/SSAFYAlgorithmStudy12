@@ -1,4 +1,4 @@
-package week6.에너지드링크;
+package week6.Day0820.에너지드링크;
 
 import java.io.BufferedReader;
 import java.util.Arrays;

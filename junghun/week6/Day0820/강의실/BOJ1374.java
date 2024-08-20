@@ -1,4 +1,4 @@
-package week6.강의실;
+package week6.Day0820.강의실;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package Day0823.algo;
+package week6.Day0823.DSLR;
 
 import java.io.BufferedReader;
 import java.util.Arrays;

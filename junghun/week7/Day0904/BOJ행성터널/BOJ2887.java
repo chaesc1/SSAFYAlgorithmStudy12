@@ -26,6 +26,7 @@ public class BOJ2887 {
         int cost;
 
         public Node(int u, int v, int cost) {
+            // 연결된 두 행성
             this.u = u;
             this.v = v;
             this.cost = cost;
@@ -56,6 +57,8 @@ public class BOJ2887 {
         }
 
         //  두 행성 A(xA, yA, zA)와 B(xB, yB, zB)를 터널로 연결할 때 드는 비용은 min(|xA-xB|, |yA-yB|, |zA-zB|)
+
+        // 각 좌표별로 정렬 후 인접한 행성들 사이의 비용을 계산하여 엣지 리스트에 추가
         planetList.sort((a, b) -> a.x - b.x);
         for (int i = 1; i < N; i++) {
             int cost = Math.abs(planetList.get(i).x - planetList.get(i - 1).x);
@@ -74,8 +77,11 @@ public class BOJ2887 {
             nodeList.add(new Node(planetList.get(i - 1).id, planetList.get(i).id, cost));
         }
 
-        // 크루스칼 알고리즘
+        // 크루스칼 알고리즘을 적용하기 위해 엣지 리스트를 정렬
         Collections.sort(nodeList);
+
+        // makeSet()
+        // Union-Find 자료구조 초기화
         parent = new int[N];
         for (int i = 0; i < N; i++) {
             parent[i] = i;
@@ -85,6 +91,7 @@ public class BOJ2887 {
         int totalEdges = 0;
 
         for (Node node : nodeList) {
+            // 두 행성이 서로 다른 집합에 존재한다면 합치기
             if (find(node.u) != find(node.v)) {
                 union(node.u, node.v);
                 result += node.cost;
@@ -98,6 +105,7 @@ public class BOJ2887 {
         System.out.println(result);
     }
 
+    // 경로 압축 기법을 사용하여 부모노드 찾기
     private static int find(int x) {
         if (parent[x] == x) {
             return x;
@@ -105,6 +113,7 @@ public class BOJ2887 {
         return parent[x] = find(parent[x]);
     }
 
+    // 두 집합을 합치기
     private static void union(int x, int y) {
         int rootA = find(x);
         int rootB = find(y);

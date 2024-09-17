@@ -1,4 +1,4 @@
-package 최소스패닝트리;
+package week9.최소스패닝트리;
 
 import java.io.BufferedReader;
 import java.io.IOException;

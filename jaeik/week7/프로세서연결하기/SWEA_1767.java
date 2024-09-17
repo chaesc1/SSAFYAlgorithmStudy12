@@ -76,6 +76,7 @@ public class SWEA_1767 {
             int l = 0;
             boolean isConnected = false;
 
+            //연결
             while(true){
                 row += dr[i];
                 col += dc[i];
@@ -94,6 +95,7 @@ public class SWEA_1767 {
                 dfs(idx+1, length+l);
             }
 
+            //연결 해제
             while(true){
                 row -= dr[i];
                 col -= dc[i];
